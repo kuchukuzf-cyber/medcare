@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedCare Dental Clinic</title>
+
+<style>
+:root{
+  --primary:#0a2540;
+  --secondary:#c9a24d;
+  --background:#f8fafc;
+  --card:#ffffff;
+  --text:#1f2933;
+}
+
+html{scroll-behavior:smooth;}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:var(--background);
+  color:var(--text);
+}
+
+header{
+  background:var(--primary);
+  padding:20px 0;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h1{color:#fff;font-size:28px;}
+nav ul{list-style:none;display:flex;gap:25px;}
+nav ul li a{color:#fff;text-decoration:none;font-weight:500;}
+
+.hero{
+  background:linear-gradient(135deg,#0a2540,#133b5c);
+  padding:90px 0;
+  color:#fff;
+}
+
+.hero-content{
+  max-width:600px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.hero h2{font-size:42px;}
+.hero p{font-size:18px;line-height:1.6;}
+
+.btn-appointment{
+  width:220px;
+  padding:14px;
+  border-radius:30px;
+  background:var(--secondary);
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  text-align:center;
+  text-decoration:none;
+}
+
+.services{padding:80px 0;}
+.services h2{text-align:center;margin-bottom:50px;font-size:32px;}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.service-card{
+  background:var(--card);
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(10,37,64,.08);
+  transition:.3s;
+}
+
+.service-card:hover{transform:translateY(-6px);}
+.service-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:15px;
+}
+.service-card h3{color:var(--primary);margin-bottom:10px;}
+
+.doctors{background:#eef4fa;padding:80px 0;}
+.doctors h2{text-align:center;margin-bottom:50px;font-size:32px;}
+
+.doctor-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.doctor-card{
+  background:var(--card);
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(10,37,64,.08);
+  transition:.3s;
+}
+
+.doctor-card:hover{transform:translateY(-6px);}
+.doctor-card img{
+  width:110px;height:110px;
+  border-radius:50%;
+  margin-bottom:15px;
+  object-fit:cover;
+}
+.doctor-card h3{color:var(--primary);}
+
+.appointment{padding:80px 0;}
+.appointment h2{text-align:center;margin-bottom:40px;}
+
+form{
+  max-width:500px;
+  margin:auto;
+  background:var(--card);
+  padding:40px;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(10,37,64,.1);
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,select,button{
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+
+form button{
+  background:var(--secondary);
+  color:#fff;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+footer{
+  background:var(--primary);
+  color:#fff;
+  padding:50px 0 20px;
+  margin-top:60px;
+}
+
+@media(max-width:768px){
+  .hero h2{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <h1>MedCare</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctors">Doctors</a></li>
+        <li><a href="#appointment">Appointment</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h2>Premium stomatologiya klinikasi</h2>
+      <p>Yuqori sifatli xizmat va tajribali shifokorlar bilan sog‘lom tabassum.</p>
+      <a href="#appointment" class="btn-appointment">Qabulga yozilish</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <h2>Xizmatlarimiz</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Profilaktika">
+        <h3>Profilaktika</h3>
+        <p>Tishlarni sog‘lom saqlash.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://dynamicdentallv.com/custom/images/adult-orthodontics.jpg" alt="Ortodontiya">
+        <h3>Ortodontiya</h3>
+        <p>Mukammal tabassum.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://www.leedentalandfacial.com/wp-content/uploads/2024/03/Orthodontics-.jpg" alt="Xirurgiya">
+        <h3>Xirurgiya</h3>
+        <p>Implant va jarrohlik xizmatlari.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="doctors" id="doctors">
+  <div class="container">
+    <h2>Bizning shifokorlar</h2>
+    <div class="doctor-grid">
+      <div class="doctor-card">
+        <img src="https://st.depositphotos.com/1004713/1435/i/450/depositphotos_14354503-stock-photo-handsome-dentist.jpg" alt="Dr. Ali">
+        <h3>Dr. Ali</h3>
+        <p>Stomatolog-terapevt</p>
+      </div>
+
+      <div class="doctor-card">
+        <img src="https://www.shutterstock.com/image-photo/beautiful-dentist-standing-crossed-arms-260nw-1271745574.jpg" alt="Dr. Madina">
+        <h3>Dr. Madina</h3>
+        <p>Stomatolog-ortodont</p>
+      </div>
+
+      <div class="doctor-card">
+        <img src="https://www.shutterstock.com/image-photo/photo-young-male-doctor-arms-260nw-2609512633.jpg" alt="Dr. Said"> 
+        <h3>Dr. Said</h3>
+        <p>Stomatolog-xirurg</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="appointment" id="appointment">
+  <div class="container">
+    <h2>Qabulga yozilish</h2>
+    <form>
+      <input type="text" placeholder="Ismingiz" required>
+      <input type="tel" placeholder="Telefon raqam" required>
+      <input type="date" required>
+      <select>
+        <option>Doktorni tanlang</option>
+        <option>Dr. Ali</option>
+        <option>Dr. Madina</option>
+        <option>Dr. Said</option>
+      </select>
+      <button>Yuborish</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;">
+    <div>
+      <h3>MedCare Dental</h3>
+      <p>Premium stomatologiya klinikasi.</p>
+    </div>
+    <div>
+      <h4>Xizmatlar</h4>
+      <p>Profilaktika</p>
+      <p>Ortodontiya</p>
+      <p>Xirurgiya</p>
+    </div>
+    <div>
+      <h4>Aloqa</h4>
+      <p> +998 90 123 45 67</p>
+      <p> Toshkent</p>
+      <p> info@medcare.uz</p>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:30px;">© 2025 MedCare Dental Clinic</p>
+</footer>
+
+</body>
+</html>
